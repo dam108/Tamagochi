@@ -14,7 +14,6 @@ public class Tamagochi {
         felicidad = 10;
         exp = 0;
         nivel = 0;
-        
     }
 
     public void setEnergia(int energia) {

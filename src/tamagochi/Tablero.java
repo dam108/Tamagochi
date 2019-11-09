@@ -10,7 +10,7 @@ public class Tablero {
     public void pintar(){
         
         System.out.println("-------------------------------");
-        estado.
+
           
         
         

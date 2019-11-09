@@ -15,7 +15,6 @@ public class Juego {
         Tamagochi tamagochi = new Tamagochi(nombre);
         EstadoTama estado = new EstadoTama();
         Tablero tablero = new Tablero();
-        
 
     }
     
