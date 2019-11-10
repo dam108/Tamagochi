@@ -2,20 +2,24 @@ package tamagochi;
 import java.util.Scanner;
 
 public class Juego {
-
+    
     public static Scanner teclado = new Scanner(System.in);
 
     public static void main(String[] args) {
         String nombre;
+        nombre = pedirNombre();
         
-        System.out.println("Ha nacido un nuevo Tamagochi ¿como quieres llamarlo?");
-        nombre = teclado.nextLine();
-        
-        // creamos las instancias necesarias para que el tamagochi este vivo
         Tamagochi tamagochi = new Tamagochi(nombre);
         Tablero tablero = new Tablero();
+        
+        tablero.pintar(tamagochi);
 
     }
     
+    public static String pedirNombre(){
+        System.out.println("¿ Como quieres llamar al tamagochi ?");
+        String tamagochiName = teclado.nextLine();//teclado.nextLine();
+        return tamagochiName;
+    }
+    
 }
-

@@ -1,12 +1,13 @@
 package tamagochi;
 
 public class Tamagochi {
-    private int energia, hambre, suciedad, felicidad, exp, nivel;
+    public int energia, hambre, suciedad, felicidad, exp, nivel;
     public String nombre;
-    private final int MAX_EXP = 50, MIN_EXP = 0, MAX_LVL = 40, MIN_LVL = 0, MAX_ES = 10, MIN_ES = 0;
-    private boolean contento, cansado,limpio, vivo;
+    public final int MAX_EXP = 50, MIN_EXP = 0, MAX_LVL = 40, MIN_LVL = 0, MAX_ES = 10, MIN_ES = 0;
+    public boolean contento, cansado,limpio, vivo;
     
-    /* CONSTRUCTOR*/
+    /* CONSTRUCTOR */
+    
     Tamagochi(String n){
         nombre = n;
         energia = 10;
@@ -20,7 +21,7 @@ public class Tamagochi {
         limpio = true;
         vivo = true;
     }
-
+    
     public void setEnergia(int energia) {
         this.energia = energia;
     }
@@ -108,5 +109,6 @@ public class Tamagochi {
     public boolean isVivo() {
         return vivo;
     }
+ 
     
 }
