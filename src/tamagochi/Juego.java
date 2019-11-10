@@ -13,7 +13,6 @@ public class Juego {
         
         // creamos las instancias necesarias para que el tamagochi este vivo
         Tamagochi tamagochi = new Tamagochi(nombre);
-        EstadoTama estado = new EstadoTama();
         Tablero tablero = new Tablero();
 
     }

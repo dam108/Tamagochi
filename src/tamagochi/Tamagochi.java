@@ -3,7 +3,8 @@ package tamagochi;
 public class Tamagochi {
     private int energia, hambre, suciedad, felicidad, exp, nivel;
     public String nombre;
-    private final int MAX_EXP = 50, MIN_EXP = 0, MAX_LVL = 40, MIN_LVL = 0;
+    private final int MAX_EXP = 50, MIN_EXP = 0, MAX_LVL = 40, MIN_LVL = 0, MAX_ES = 10, MIN_ES = 0;
+    private boolean contento, cansado,limpio, vivo;
     
     /* CONSTRUCTOR*/
     Tamagochi(String n){
@@ -14,6 +15,10 @@ public class Tamagochi {
         felicidad = 10;
         exp = 0;
         nivel = 0;
+        contento = true;
+        cansado = false;
+        limpio = true;
+        vivo = true;
     }
 
     public void setEnergia(int energia) {
@@ -70,6 +75,38 @@ public class Tamagochi {
 
     public String getNombre() {
         return nombre;
+    }
+    
+    public void setContento(boolean contento) {
+        this.contento = contento;
+    }
+
+    public void setCansado(boolean cansado) {
+        this.cansado = cansado;
+    }
+
+    public void setLimpio(boolean limpio) {
+        this.limpio = limpio;
+    }
+
+    public void setVivo(boolean vivo) {
+        this.vivo = vivo;
+    }
+
+    public boolean isContento(){
+        return contento;
+    }
+
+    public boolean isCansado() {
+        return cansado;
+    }
+
+    public boolean isLimpio() {
+        return limpio;
+    }
+
+    public boolean isVivo() {
+        return vivo;
     }
     
 }
