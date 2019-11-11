@@ -3,7 +3,7 @@ package tamagochi;
 public class Tamagochi {
     private int energia, hambre, suciedad, felicidad, exp, nivel;
     public String nombre;
-    private final int MAX_EXP = 100, gain_EXP = 50, MAX_LVL = 40, MIN_LVL = 1;
+    private static final int MAXEXP = 100, GAINEXP = 50, MAXLVL = 40, MINLVL = 1;
     private boolean contento, cansado,limpio, vivo, hambriento, flagMuerteEstados, flagMuerteNivelMax; 
     
     /* CONSTRUCTOR */
@@ -41,7 +41,7 @@ public class Tamagochi {
             flagMuerteEstados = true;
             this.vivo = false;
         }
-        if (this.nivel > MAX_LVL ){
+        if (this.nivel > MAXLVL ){
             flagMuerteNivelMax = true;
             this.vivo = false;
         }
@@ -84,9 +84,9 @@ public class Tamagochi {
     }
     
     public void aumetarExpNivel(){
-        this.setExp(this.getExp()+gain_EXP);
-        if (this.getExp() == MAX_EXP){
-            this.setNivel(this.getNivel()+ MIN_LVL);
+        this.setExp(this.getExp()+GAINEXP);
+        if (this.getExp() == MAXEXP){
+            this.setNivel(this.getNivel()+ MINLVL);
             this.setExp(0);
         }
     }
